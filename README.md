@@ -18,5 +18,5 @@ Homebrew app to load payloads elf/bin from the PS5 internal drive or external us
  - Start the "Homebrew Launcher" app and then go to "Payload Loader" menu item to load the payloads you want.
 
 ## How to update/add payloads
- - Download the payload you want and ftp it to the `/data/homebrew/payload-loaders/payloads` folder
+ - Download the payload you want and ftp it to the `/data/homebrew/payload-loader/payloads` folder
  - The payload will be automatically included the the "Payload Loader" menu item
