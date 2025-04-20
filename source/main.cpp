@@ -72,7 +72,7 @@ int main(int argc, char *argv[])
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
     if (sockfd == -1)
     {
-        printf("ELF Loader not started\n");
+        printf("Failed to create socket\n");
         return -1;
     }
 
