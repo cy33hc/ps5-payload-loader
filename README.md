@@ -12,7 +12,7 @@ Homebrew app to load payloads elf/bin from the PS5 internal drive or external us
  - Download [Payload Loader Homebrew App](https://github.com/cy33hc/ps5-payload-loader/releases/download/1.00/payload-loader.zip). Extract the contents of the ZIP and upload it to the PS5 `/data/homebrew` folder.
  - Start the "Homebrew Launcher" app and then select the "Payload Loader" menu item to load the payloads. By default I have included the etaHEN-2.0b, kstuff-1.4 and ftpsrv-0.11.3 payloads
 
-## Nornal usage
+## Normal usage
  - Put disk into PS5 and then start "PS5 JAR Loader" from the "Disc Player"
  - Run the utmx expliot, elf-loader followied by the websrv payloads
  - Start the "Homebrew Launcher" app and then go to "Payload Loader" menu item to load the payloads you want.
