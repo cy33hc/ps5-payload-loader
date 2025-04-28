@@ -25,6 +25,7 @@ add_custom_target(package
    COMMAND mkdir -p payload-loader/payloads
    COMMAND cp -R ${PROJECT_SOURCE_DIR}/data/sce_sys/icon0.png payload-loader/payloads
    COMMAND curl -L -o 'payload-loader/payloads/etaHen 2.0b.bin' 'https://github.com/etaHEN/etaHEN/releases/download/2.0b/etaHEN-2.0b.bin'
+   COMMAND curl -L -o 'payload-loader/payloads/etaHen 2.1b.bin' 'https://github.com/etaHEN/etaHEN/releases/download/2.1B/etaHEN.bin'
    COMMAND curl -L -o 'payload-loader/payloads/kstuff 1.4.elf' 'https://github.com/EchoStretch/kstuff/releases/download/v1.4/kstuff.elf'
    COMMAND curl -L -o ftpsrv.zip 'https://github.com/ps5-payload-dev/ftpsrv/releases/download/v0.11.3/Payload.zip'
    COMMAND unzip ftpsrv.zip -d payload-loader/payloads
