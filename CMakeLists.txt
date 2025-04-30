@@ -2,6 +2,13 @@ cmake_minimum_required(VERSION 3.5)
 
 project(payload-loader)
 
+if(DEFINED ENV{JAR_LOADER})
+  add_definitions(-DJAR_LOADER=1)
+  message("BDJ Enabled")
+else()
+  message("BDJ Disabled")
+endif()
+
 include_directories(
   source
 )
@@ -11,8 +18,7 @@ add_executable(payload-loader.elf
 )
 
 target_link_libraries(payload-loader.elf
-  SceNet
-  kernel
+  kernel_sys
 )
 
 add_custom_target(package
