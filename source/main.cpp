@@ -384,7 +384,7 @@ int main(int argc, char *argv[])
         index++;
     }
 
-    notify("Wait 5sec then close Disc Player\nfor queued payloads to load");
+    notify("Wait 12s then Close Disc Player\nfor queued payloads to load");
     start_time = get_tick();
     ret = 0;
     do
@@ -394,11 +394,14 @@ int main(int argc, char *argv[])
         ret = find_process("SceDiscPlayer");
         delta_time = get_tick() - start_time;
     } while (ret == 0 && (delta_time < MAX_WAIT_TIME));
-    notify("ret=%d, delta_time=%lu", ret, delta_time);
+    sleep(3);
 
     if ( ret == 0)
+    {
+        notify("Timeout of 1min exceeded\nAborted loading queued payloads");
         goto cleanup;
-     
+    }
+
     for (int i=0; i < elf_files.size(); i++)
     {
         send_elf(elf_files[i], true);

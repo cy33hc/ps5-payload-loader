@@ -13,15 +13,15 @@ async function main() {
                     imgPath: '/fs/' + PAYLOADS_DIR + 'icon0.png',
                     onclick: async () => {
                         return {
-                            path: HOMEBREW_ELF,
-                            args: PAYLOADS_DIR + entry.name
+                            path: PAYLOADS_DIR + entry.name,
+                            daemon: true
                         }
                     }
                 };
             });
     }
     return {
-        mainText: "Payload Loader 1.1.0",
+        mainText: "Payload Loader 1.2.0",
         secondaryText: 'Payload Loader',
         onclick: async () => {
             let items = await getPayloadList();
