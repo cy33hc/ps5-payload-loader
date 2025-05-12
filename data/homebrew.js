@@ -5,7 +5,7 @@ async function main() {
 
     async function getPayloadList() {
         let listing = await ApiClient.fsListDir(PAYLOADS_DIR);
-        return listing.filter(entry =>
+        return listing.data.filter(entry =>
             PAYLOAD_TYPES.includes(entry.name.slice(-3))).map(entry => {
                 const name = entry.name.slice(0, -4);
                 return {
