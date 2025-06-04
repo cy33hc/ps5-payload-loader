@@ -30,18 +30,17 @@ add_custom_target(package
    COMMAND cp payload-loader.elf payload-loader
    COMMAND mkdir -p payload-loader/payloads
    COMMAND cp -R ${PROJECT_SOURCE_DIR}/data/sce_sys/icon0.png payload-loader/payloads
-   COMMAND curl -L -o 'payload-loader/payloads/etaHen 2.0b.bin' 'https://github.com/etaHEN/etaHEN/releases/download/2.0b/etaHEN-2.0b.bin'
    COMMAND curl -L -o 'payload-loader/payloads/etaHen 2.1b.bin' 'https://github.com/etaHEN/etaHEN/releases/download/2.1B/etaHEN.bin'
    COMMAND curl -L -o 'payload-loader/payloads/kstuff 1.5.elf' 'https://github.com/EchoStretch/kstuff/releases/download/v1.5/kstuff.elf'
-   COMMAND curl -L -o 'payload-loader/payloads/ezremote-dpi 1.00.elf' 'https://github.com/cy33hc/ps5-ezremote-dpi/releases/download/1.00/ezremote-dpi.elf'
-   COMMAND curl -L -o ftpsrv.zip 'https://github.com/ps5-payload-dev/ftpsrv/releases/download/v0.11.3/Payload.zip'
+   COMMAND curl -L -o 'payload-loader/payloads/ezremote-dpi 1.02.elf' 'https://github.com/cy33hc/ps5-ezremote-dpi/releases/download/1.02/ezremote-dpi.elf'
+   COMMAND curl -L -o ftpsrv.zip 'https://github.com/ps5-payload-dev/ftpsrv/releases/download/v0.12/Payload.zip'
    COMMAND unzip ftpsrv.zip -d payload-loader/payloads
    COMMAND rm ftpsrv.zip
-   COMMAND mv payload-loader/payloads/ftpsrv.elf 'payload-loader/payloads/ftpsrv 0.11.3.elf'
-   COMMAND curl -L -o kstuff-toggle.zip 'https://github.com/EchoStretch/kstuff-toggle/releases/download/0.1/Kstuff-Toggle.zip'
+   COMMAND mv payload-loader/payloads/ftpsrv.elf 'payload-loader/payloads/ftpsrv 0.20.elf'
+   COMMAND curl -L -o kstuff-toggle.zip 'https://github.com/EchoStretch/kstuff-toggle/releases/download/0.2/Kstuff-Toggle.zip'
    COMMAND unzip kstuff-toggle.zip -d payload-loader/payloads
    COMMAND rm kstuff-toggle.zip
-   COMMAND mv payload-loader/payloads/kstuff-toggle.elf 'payload-loader/payloads/kstuff-toggle 0.1.elf'
+   COMMAND mv payload-loader/payloads/kstuff-toggle.elf 'payload-loader/payloads/kstuff-toggle 0.2.elf'
    COMMAND rm payload-loader/payloads/homebrew.js
 
    COMMAND zip -r payload-loader.zip payload-loader/

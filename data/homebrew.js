@@ -21,7 +21,7 @@ async function main() {
             });
     }
     return {
-        mainText: "Payload Loader 1.2.0",
+        mainText: "Payload Loader 1.4.0",
         secondaryText: 'Payload Loader',
         onclick: async () => {
             let items = await getPayloadList();
